@@ -1,0 +1,28 @@
+-
+	var benList = [
+		{
+			iconPath: "/assets/img/content/time.png",
+			title: "В срок",
+			desc: "Сроки и санкции за срывы сроков прописаны в договоре."
+		},
+		{
+			iconPath: "/assets/img/content/safe.png",
+			title: "Без риска",
+			desc: "Работаем без предоплаты. Вы платите после строительства."
+		},
+		{
+			iconPath: "/assets/img/content/garanty.png",
+			title: "Срок службы от 20 лет",
+			desc: "Благодаря сертифицированным материалам ГОСТ 24045-2016 и правильному монтажу опытными бригадами"
+		}
+	]
+aside.benefits
+	.benefits__container.container
+		ul.benefits__list
+			each item in benList
+				li.benefits__item
+					.benefits__item-image
+						img.benefits__item-icon(scr=item.iconPath alt=item.title)
+					.benefits__item-text
+						h3.benefits__item-title=item.title
+						.benefits__item-desc=item.desc

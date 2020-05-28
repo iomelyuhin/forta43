@@ -1,0 +1,32 @@
+header.header
+	.header__content
+		.header__content-container.container
+			a.header__logo(href="/")
+				img.heder__logo-img(src="/assets/img/content/logo.png" alt="")
+			.header__calc
+				a.header__calc-btn(href="#calc")
+					.header__calc-btn-text Калькулятор забора
+			.header__contacts
+				.header__contacts-tel
+					a.header__contacts-tel-text(href="tel:+78332250000") +7 (8332) 25-00-00
+				.header__contacts-other
+					a.header__contacts-other-email(href="mailto:zabory@mail.ru") zabory@mail.ru
+					.header__contcts-other-time ежедневно с 09.00 до 21.00
+	nav.header__nav
+		.header__nav-container.container
+			ul.header__nav-list
+				li.header__nav-item.header__nav-item--catalog
+					a#catBtn.header__nav-item-link.header__nav-item-link--catalog(href="/") Каталог
+				li.header__nav-item
+					a.header__nav-item-link(href="/prices.html") Цены
+				li.header__nav-item
+					a.header__nav-item-link(href="/sale.html") Акции
+				li.header__nav-item
+					a.header__nav-item-link(href="/about.html") О&nbsp;компании
+				li.header__nav-item
+					a.header__nav-item-link(href="/contacts.html") Контакты
+			button.hamburger.hamburger--collapse(type="button" aria-label="navigation-menu")
+				span.hamburger-box(data-name="menu")
+					span.hamburger-inner
+		include ../includes/header/catalog
+	

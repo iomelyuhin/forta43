@@ -1,0 +1,26 @@
+include ../common/mixins.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+	block head
+		head
+			meta(charset="utf-8")
+			title Title your site | #{title}
+			meta(content="width=device-width, initial-scale=1" name="viewport")
+			meta(content="ie=edge" http-equiv="x-ua-compatible")
+			link(rel="stylesheet" href="/assets/css/base.css")
+			link(rel="stylesheet" href="/assets/css/blocks/header.css")
+			link(rel="stylesheet" href="/assets/css/blocks/footer.css")
+			link(rel="stylesheet" href="/assets/css/utils/hamburgers/hamburgers.css")
+			block styles
+	body
+		.wrapper
+			.maincontent
+				include ./header
+				block content
+				include ./footer
+				
+		script(src="/assets/js/main.js")
+		block scripts

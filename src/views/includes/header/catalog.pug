@@ -1,0 +1,90 @@
+-
+	var fencesList = [
+		{
+			name: "Заборы из профнастила",
+			href: "/"
+		},
+		{
+			name: "Заборы из штакетника",
+			href: "/"
+		},
+		{
+			name: "Секционные профильные заборы",
+			href: "/"
+		},
+		{
+			name: "Заборы 3D",
+			href: "/"
+		},
+		{
+			name: "Заборы для дачи",
+			href: "/"
+		},
+		{
+			name: "Заборы на монолитно-ленточном фундаменте с кирпичными столбами",
+			href: "/"
+		},
+		{
+			name: "Заборы из сетки рабица",
+			href: "/"
+		},
+		{
+			name: "Секционные заборы из сетки",
+			href: "/"
+		}
+	]
+	var enterList = [
+		{
+			name: "Ворота распашные",
+			href: "/"
+		},
+		{
+			name: "Калитки",
+			href: "/"
+		},
+		{
+			name: "Ворота откатные",
+			href: "/"
+		}
+	]
+	var othersList = [
+		{
+			name: "Навесы для автомобилей",
+			href: "/"
+		},
+		{
+			name: "Выездной менеджер",
+			href: "/"
+		},
+		{
+			name: "Наши работы",
+			href: "/"
+		}
+	]
+//- ----------------------------------------------------------
+//- --------------------------CATALOG-------------------------
+//- ----------------------------------------------------------
+aside#cat.catalog
+	.catalog__container.container
+		.catalog__fences
+			.catalog__fences-wrap
+				h3.catalog__fences-title Заборы
+				a.catalog__fences-btn(href="/#calc") Онлайн калькулятор
+			ul.catalog__fences-list
+				each item in fencesList
+					li.catalog__item
+						a.catalog__item-link(href=item.href)=item.name
+		.catalog__enter
+			.catalog__enter-wrap
+				h3.catalog__enter-title Входная группа
+			ul.catalog__enter-list
+				each item in enterList
+					li.catalog__item
+						a.catalog__item-link(href=item.href)=item.name
+		.catalog__others
+			.catalog__others-wrap
+				h3.catalog__others-title Другое
+			ul.catalog__others-list
+				each item in othersList
+					li.catalog__item
+						a.catalog__item-link(href=item.href)=item.name

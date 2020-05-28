@@ -1,0 +1,14 @@
+extends ../common/layout
+
+block styles
+	link(rel="stylesheet" href="/assets/css/blocks/blog.css")
+
+block variables
+	-var title = "Главная"
+
+block content
+	include ../includes/index/hero
+	include ../includes/index/benefits
+
+block scripts
+	//- script(src="/assets/js/main.min.js")
