@@ -1,0 +1,51 @@
+-
+	var worksList1 = [
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 1"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 2"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 3"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 4"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 5"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 6"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из деревянного профлиста 7"
+		},
+		{
+			img: "work-01.jpg",
+			title: "Забор из профлиста 8"
+		}
+	]
+section.works
+	.works__container.container
+		h2.works__title Выполненные работы
+		.works__slider-choice
+			ul.works__slider-choice-list
+				li.works__slider-choice-item
+					button.works__slider-choice-link(data-type="prof" type="button").active Заборы из профнастила
+				li.works__slider-choice-item
+					button.works__slider-choice-link(data-type="shtak" type="button") Заборы из штакетника
+		.works__content.works__content--slider
+			ul.slider__list.active(data-type="prof")
+				each item in worksList1
+					li.slider__item
+						a.slider__item-image(href="#")
+							img.slider__item-img(src=`/assets/img/content/${item.img}`)
+						h3.slider__item-title=item.title

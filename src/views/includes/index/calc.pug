@@ -1,0 +1,58 @@
+section.calc
+	h2.calc__title Расчёт стоимости забора
+	form.calc__form(action="" method="POST")
+		.calc__checkboxes
+			label.calc__checkboxes-label
+				input.calc__checkboxes-radio(type="radio", name="good" checked)
+				.calc__checkboxes-fake-radio Профнастил
+			label.calc__checkboxes-label
+				input.calc__checkboxes-radio(type="radio", name="good")
+				.calc__checkboxes-fake-radio Штакетник
+			label.calc__checkboxes-label
+				input.calc__checkboxes-radio(type="radio", name="good")
+				.calc__checkboxes-fake-radio Рабица
+			label.calc__checkboxes-label
+				input.calc__checkboxes-radio(type="radio", name="good")
+				.calc__checkboxes-fake-radio 3D забор
+		.calc__inputs
+			label.calc__inputs-label
+				h3.calc__input-title Общая длина, включая ворота и калитку, м:
+				input.calc__input._input(name="length" placeholder="0 м")
+			label.calc__inputs-label
+				h3.calc__input-title Покраска:
+				select.calc__input-select(name="color")
+					option.calc__input-select-option(selected value="Красный") Красный
+					option.calc__input-select-option(value="Жёлтый") Жёлтый
+					option.calc__input-select-option(value="Синий") Синий
+			label.calc__inputs-label
+				h3.calc__input-title Высота:
+				select.calc__input-select(name="height")
+					option.calc__input-select-option(selected value="1.5") 1.5
+					option.calc__input-select-option(value="2") 2
+					option.calc__input-select-option(value="2.5") 2.5
+			label.calc__inputs-label
+				h3.calc__input-title Высота забора (профлиста):
+				input.calc__input._input(name="qty-doors" placeholder="0")
+			label.calc__inputs-label
+				h3.calc__input-title Количество ворот:
+				select.calc__input-select(name="type")
+					option.calc__input-select-option(selected value="1.5-p") 1.5 полимерное покрытие
+					option.calc__input-select-option(value="2-p") 2 полимерное покрытие
+					option.calc__input-select-option(value="2.5-p") 2.5 полимерное покрытие
+			label.calc__inputs-label
+				h3.calc__input-title Ширина ворот: 
+				select.calc__input-select(name="width")
+					option.calc__input-select-option(selected value="1.5") 1.5
+					option.calc__input-select-option(value="2") 2
+					option.calc__input-select-option(value="2.5") 2.5
+			label.calc__inputs-label
+				h3.calc__input-title Количество горизонталей (лаги): 
+				select.calc__input-select(name="qty-hor")
+					option.calc__input-select-option(selected value="1.5") 1.5
+					option.calc__input-select-option(value="2") 2
+					option.calc__input-select-option(value="2.5") 2.5
+			label.calc__inputs-label
+				h3.calc__input-title Количество калиток:
+				input.calc__input._input(name="qty-lockdoors" placeholder="0")
+		.calc__btn
+			button.calc__button.form-btn(type="button") Расчитать

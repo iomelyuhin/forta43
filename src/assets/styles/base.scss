@@ -12,7 +12,7 @@
 	/*******************************************************************************/
 	*                                              {  margin:0;padding:0;outline:none;background-color:transparent;vertical-align: top;}
 	html                                           {  
-		font-size: 18px;
+		font-size: 16px;
 		font-family: $open;
 		@include tablets {
 			font-size: 16px;
@@ -38,9 +38,8 @@
 	sup                                            {  vertical-align:super;}
 	// ul                                             {  display: flex;flex-direction:column;list-style-type:none;font-size:0;}
 	ul {  
-		display: flex;
-		flex-direction:column;
 		list-style-type:none;
+		// display: flex;
 		// font-size:0;
 	}
 	img                                            {  vertical-align:top;border:none;max-width: 100%; height: auto;}
@@ -201,27 +200,147 @@
 	
 	
 /*******************************************************************************/
-	/**************************    COMMON STYLES    *****************************/
-	/*******************************************************************************/
-	.wrapper {
-		overflow: hidden;
-	}
+/**************************    COMMON STYLES    *****************************/
+/*******************************************************************************/
+.wrapper {
+	overflow: hidden;
+}
 
-	.maincontent {
-		min-height: 100vh;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-	}
+.maincontent {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
 
-	.container {
-		margin: 0 auto;
-		width: 95%;
-		position: relative;
-		max-width: 1440px;
-		@include phones {
-			width: 90%;
-		}
+.container {
+	margin: 0 auto;
+	width: 95%;
+	position: relative;
+	max-width: 1440px;
+	@include phones {
+		width: 90%;
 	}
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: $extra;
+	color: $black;
+}
+
+h2 {
+	font-weight: $extra;
+	color: $black;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.desc {
+	font-size: 14px;
+	color: $black;
+}
+
+section {width: 100%;}
+
+
+//=====================================================
+//=============common styles - inputs and forms========
+//=====================================================
+.input-title {
+	font-size: 14px;
+	color: $w;
+	font-weight: normal;
+}
+
+.input {
+	padding: 20px 0 20px 23px;
+	background-color: $w;
+	border-radius: 7px;
+	width: 100%;
+	&::placeholder {
+		color: $grey;
+		text-transform: uppercase;
+	}
+}
+
+.form-btn {
+	width: 100%;
+	padding: 21px 0;
+	margin: 0 auto;
+	background-color: $yellow;
+	border-radius: 7px;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	box-shadow: 0 3px 0 #685123;
+	transition: $norm;
+
+	&:hover {
+		background-color: $yellow-hover;
+	}
+}
+
+.checkbox-input {
+	appearance: none;
+}
+
+.checkbox-fake-input {
+	width: 36px;
+	height: 36px;
+	border-radius: 5px;
+	background-color: $w;
+	position: relative;
+	flex-shrink: 0;
+
+
+	&::before{
+		content: "";
+		display: block;
+		opacity: 0;
+		width: 20px;
+		height: 10px;
+		border-bottom: 4px solid $yellow-hover;
+		border-left: 4px solid $yellow-hover;
+		position: absolute;
+		transform: rotate(-45deg) translate(-50%,-10%);
+		top: 4px;
+		left: 45%;
+		transition: $norm;
+	}
+}
+
+.checkbox-input:checked+.checkbox-fake-input::before {
+	opacity: 1;
+}
+
+.checkbox-text {
+	font-size: 14px;
+	color: $w;
+}
+
+//==========================================================
+//===================BUTTONS================================
+//==========================================================
+
+.catalog__button {
+	width: 100%;
+	padding: 18px 0;
+	background-color: $yellow;
+	border-radius: 7px;
+	font-weight: $bold;
+	text-transform: uppercase;
+	box-shadow: 0 3px 0 #685123;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: $norm;
+	font-size: 14px;
+
+	&:hover {
+		background-color: $yellow-hover;
+	}
+}

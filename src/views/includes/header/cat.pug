@@ -64,27 +64,27 @@
 //- ----------------------------------------------------------
 //- --------------------------CATALOG-------------------------
 //- ----------------------------------------------------------
-aside#cat.catalog
-	.catalog__container.container
-		.catalog__fences
-			.catalog__fences-wrap
-				h3.catalog__fences-title Заборы
-				a.catalog__fences-btn(href="/#calc") Онлайн калькулятор
-			ul.catalog__fences-list
+aside#cat.cat
+	.cat__container.container
+		.cat__fences
+			.cat__fences-wrap
+				h3.cat__fences-title Заборы
+				a.cat__fences-btn(href="/#calc") Онлайн калькулятор
+			ul.cat__fences-list
 				each item in fencesList
-					li.catalog__item
-						a.catalog__item-link(href=item.href)=item.name
-		.catalog__enter
-			.catalog__enter-wrap
-				h3.catalog__enter-title Входная группа
-			ul.catalog__enter-list
+					li.cat__item
+						a.cat__item-link(href=item.href)=item.name
+		.cat__enter
+			.cat__enter-wrap
+				h3.cat__enter-title Входная группа
+			ul.cat__enter-list
 				each item in enterList
-					li.catalog__item
-						a.catalog__item-link(href=item.href)=item.name
-		.catalog__others
-			.catalog__others-wrap
-				h3.catalog__others-title Другое
-			ul.catalog__others-list
+					li.cat__item
+						a.cat__item-link(href=item.href)=item.name
+		.cat__others
+			.cat__others-wrap
+				h3.cat__others-title Другое
+			ul.cat__others-list
 				each item in othersList
-					li.catalog__item
-						a.catalog__item-link(href=item.href)=item.name
+					li.cat__item
+						a.cat__item-link(href=item.href)=item.name

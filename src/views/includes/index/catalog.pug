@@ -1,0 +1,65 @@
+-
+	var catList = [
+		{
+			title: "Заборы из профнастила",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Заборы из профнастила",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Секционные профильные заборы",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Заборы 3D",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Заборы для дачи",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Заборы на монолитно-ленточном фундаменте с кирпичными столбами",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Заборы из сетки рабица",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		},
+		{
+			title: "Секционные заборы из сетки",
+			price: "от 1345 р. за п.м.",
+			href: "/",
+			img: "cat-01.jpg"
+		}
+	]
+section.catalog
+	.catalog__container.container
+		h2.catalog__title Каталог заборов от производителя
+		.catalog__desc.desc Компания «Доступные заборы» занимается изготовлением и установкой заборов любой сложности. Мы предлагаем качественные ограждения. Долговечность, приемлемая цена, короткие сроки — вот главные преимущества нашей фирмы. Мы всегда поможем Вам подобрать именно ту конструкцию, которая Вам необходима, а внешний вид будет Вас радовать долгие годы.
+		.catalog__content
+			ul.catalog__list
+				each item in catList
+					li.catalog__item
+						h3.catalog__item-title=item.title
+						.catalog__item-image
+							img(src=`/assets/img/content/${item.img}`)
+							.catalog__item-image-price=item.price
+						+button("Заказать заборы", item.href, "catalog__button")
+						

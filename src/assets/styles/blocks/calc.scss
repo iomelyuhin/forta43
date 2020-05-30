@@ -1,0 +1,91 @@
+@import "../utils/variables";
+
+.calc {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc__form {
+  margin-top: 35px;
+  background-color: $blue;
+  border-radius: 7px;
+	padding: 30px 45px;
+	width: 100%;
+	max-width: 945px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.calc__checkboxes {
+	display: flex;
+	justify-content: center;
+}
+
+.calc__checkboxes-radio {
+	appearance: none;
+	position: absolute;
+}
+
+.calc__heckboxes-label {
+  &:last-child {
+    .calc__checkboxes-fake-radio {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.calc__checkboxes-fake-radio {
+	background-color: transparent;
+	padding: 10px 20px;
+  border-radius: 7px;
+	font-weight: $bold;
+	color: $w;
+	margin-right: 10px;
+	text-transform: uppercase;
+	transition: $norm;
+}
+
+.calc__checkboxes-radio:checked+.calc__checkboxes-fake-radio {
+	background-color: $yellow;
+	color: $black;
+}
+
+.calc__inputs {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 25px;
+	justify-content: space-between;
+}
+
+.calc__inputs-label {
+	width: 48%;
+	margin-bottom: 30px;
+}
+
+.calc__input-title {
+	font-weight: normal;
+	font-size: 14px;
+	color: $w;
+	margin-bottom: 5px;
+}
+
+.calc__input, 
+.calc__input-select {
+	background-color: $w;
+	width: 100%;
+	padding: 15px 23px;
+	margin-right: 29px;
+	border-radius: 7px;
+	text-transform: uppercase;
+	color: $grey;
+}
+
+.calc__btn {
+	width: 44%;
+}
+

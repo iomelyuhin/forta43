@@ -2,6 +2,13 @@ extends ../common/layout
 
 block styles
 	link(rel="stylesheet" href="/assets/css/blocks/blog.css")
+	link(rel="stylesheet" href="/assets/css/blocks/hero.css")
+	link(rel="stylesheet" href="/assets/css/blocks/form.css")
+	link(rel="stylesheet" href="/assets/css/blocks/benefits.css")
+	link(rel="stylesheet" href="/assets/css/blocks/catalog.css")
+	link(rel="stylesheet" href="/assets/css/blocks/works.css")
+	link(rel="stylesheet" href="/assets/css/blocks/calc.css")
+	link(rel="stylesheet" href="/assets/css/blocks/map.css")
 
 block variables
 	-var title = "Главная"
@@ -9,6 +16,13 @@ block variables
 block content
 	include ../includes/index/hero
 	include ../includes/index/benefits
+	include ../includes/index/catalog
+	include ../includes/index/works
+	include ../includes/index/calc
+	include ../includes/index/map
+	include ../common/buy-now
 
 block scripts
-	//- script(src="/assets/js/main.min.js")
+	script(src="/assets/js/index.js")
+	script(src="/assets/js/map.js")
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

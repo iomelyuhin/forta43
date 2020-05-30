@@ -1,2 +1,14 @@
-footer
-    p Footer
+footer.footer
+	.footer__container.container
+		ul.footer__fences-list
+			each item in fencesList
+				li.footer__item
+					a.footer__link=item.name
+		ul.footer__enter-list
+			each item in enterList
+				li.footer__item
+					a.footer__link=item.name
+		ul.footer__others-list
+			each item in othersList
+				li.footer__item
+					a.footer__link=item.name

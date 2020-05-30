@@ -1,0 +1,57 @@
+@import "../utils/variables";
+
+.catalog {
+	padding: 44px 0;
+}
+
+.catalog__desc {
+	margin-top: 39px;
+}
+
+.catalog__content {
+	margin-top: 64px;
+}
+
+.catalog__list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+.catalog__item {
+	width: 23%;
+	display: flex;
+	flex-direction: column;
+}
+
+.catalog__item-title {
+	min-height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-size: 16px;
+}
+
+.catalog__item-image {
+	width: 100%;
+	position: relative;
+	margin-bottom: 17px;
+}
+
+.catalog__item-image-price {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	background-color: $blue;
+	padding: 9px 15px;
+	color: $w;
+	font-size: 16px;
+	border-radius: 0 7px 7px 0;
+}
+
+.catalog__button {
+	margin-bottom: 40px;
+
+}

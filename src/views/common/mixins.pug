@@ -13,3 +13,6 @@ mixin imagePng(path, className, alt)
 		source(type='image/webp', srcset=`/assets/img/${path}.webp`)
 		source(type='image/png', srcset=`/assets/img/${path}.png`)
 		img(src=`/img/${path}.png` alt=`${alt}`)
+
+mixin button(text, href, cls)
+	a.btn(class=cls href=href)=text

@@ -1,0 +1,49 @@
+@import "../utils/variables";
+
+.hero {
+	padding: 35px 0 35px 0;
+}
+
+.hero__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+//==============================================
+//=================FORM STYLES==================
+//==============================================
+
+.hero__form {
+	width: 40%;
+	max-width: 458px;
+}
+
+.hero__title {
+	text-transform: uppercase;
+	font-weight: $extra;
+	color: $blue;
+	
+	span {
+		color: $yellow-text;
+	}
+}
+
+.hero__form-wrap {
+	margin-top: 20px;
+}
+
+//==============================================
+//=================IMAGE STYLES==================
+//==============================================
+
+.hero__image {
+	width: 60%;
+	// display: flex;
+	// justify-content: flex-end;
+	// background: URL("/assets/img/content/hero.png") no-repeat;
+	// background-size: contain;
+}
+
+.hero__image-img {
+	min-width: -webkit-fill-available;
+}

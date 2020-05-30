@@ -1,7 +1,7 @@
 -
 	var benList = [
 		{
-			iconPath: "/assets/img/content/time.png",
+			iconPath: "/assets/img/content/time.webp",
 			title: "В срок",
 			desc: "Сроки и санкции за срывы сроков прописаны в договоре."
 		},
@@ -22,7 +22,7 @@ aside.benefits
 			each item in benList
 				li.benefits__item
 					.benefits__item-image
-						img.benefits__item-icon(scr=item.iconPath alt=item.title)
+						img.benefits__item-icon(src=item.iconPath alt=item.title)
 					.benefits__item-text
 						h3.benefits__item-title=item.title
 						.benefits__item-desc=item.desc

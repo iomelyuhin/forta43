@@ -1,0 +1,26 @@
+section.buy-now
+	.buy-now__container.container
+		h1.buy-now__title Рассчитайте стоимость ограждения
+		.buy-now__desc.desc на сайте или свяжитесь с нашим менеджером
+		.buy-now__content
+			.buy-now__calc
+				h3.buy-now__calc-title Калькулятор забора
+				.buy-now__calc-image
+					img.buy-now__calc-img(src="/assets/img/content/calc.png")
+				.buy-now__calc-button
+					+button("Стоимость под ключ", "/", "buy-now__calc-btn")
+			.buy-now__call.buy-now__call--call-form
+				form.call-form(action="" method="POST")
+					h3.call-form__title Позвоните по номеру:
+					a.call-form__tel(href="tel:+78332250000") +7(8332)25-00-00
+					label.call-form__label
+						.call-form__desc или оставьте Ваш телефон и мы Вам перезвоним
+						input.call-form__input.input(type="text" required placeholder="+7 (XXX) xxx-xx-xx")
+					.call-form__btn
+						button.call-form__button.form-btn(type="submit") Заказать
+					label.call-form__checkbox-label
+						input.call-form__checkbox-input(type="checkbox", name="agree" required)
+						.call-form__checkbox-fake-input
+						.call-form__checkbox-text я даю согласие на обработку персональных данных
+				.buy-now__call-image
+					img.buy-now__call-img(src="/assets/img/content/man.png", alt="")
