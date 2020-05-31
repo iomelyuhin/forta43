@@ -88,3 +88,6 @@ aside#cat.cat
 				each item in othersList
 					li.cat__item
 						a.cat__item-link(href=item.href)=item.name
+		button.cat__arrow#closeCat(type="button")
+			+icon("arrow", "cat__arrow-icon")
+			.cat__arrow-text Назад

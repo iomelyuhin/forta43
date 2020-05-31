@@ -1,14 +1,58 @@
+-
+	var fencesList1 = [
+		{
+			name: "Заборы из профнастила",
+			href: "/"
+		},
+		{
+			name: "Заборы из штакетника",
+			href: "/"
+		},
+		{
+			name: "Секционные профильные заборы",
+			href: "/"
+		},
+		{
+			name: "Заборы 3D",
+			href: "/"
+		},
+		{
+			name: "Заборы для дачи",
+			href: "/"
+		}
+	]
+	var fencesList2 = [
+		{
+			name: "Заборы на монолитно-ленточном фундаменте с кирпичными столбами",
+			href: "/"
+		},
+		{
+			name: "Заборы из сетки рабица",
+			href: "/"
+		},
+		{
+			name: "Секционные заборы из сетки",
+			href: "/"
+		}
+	]
+
 footer.footer
 	.footer__container.container
-		ul.footer__fences-list
-			each item in fencesList
-				li.footer__item
-					a.footer__link=item.name
-		ul.footer__enter-list
-			each item in enterList
-				li.footer__item
-					a.footer__link=item.name
-		ul.footer__others-list
-			each item in othersList
-				li.footer__item
-					a.footer__link=item.name
+		.footer__content
+			ul.footer__fences-list
+				each item in fencesList1
+					li.footer__item
+						a.footer__link(href=item.href)=item.name
+			ul.footer__fences-list
+				each item in fencesList2
+					li.footer__item
+						a.footer__link(href=item.href)=item.name
+			ul.footer__enter-list
+				each item in enterList
+					li.footer__item
+						a.footer__link(href=item.href)=item.name
+			ul.footer__others-list
+				each item in othersList
+					li.footer__item
+						a.footer__link(href=item.href)=item.name
+		.footer__copy © 2020 «ФОРТА» — изготовление и установка заборов под ключ для Вашего дома

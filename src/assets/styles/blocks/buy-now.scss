@@ -1,0 +1,150 @@
+@import "../utils/variables";
+@import "../mixins/media";
+
+.buy-now {
+	padding: 44px 0 60px 0;
+}
+
+.buy-now__desc {
+	text-align: center;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.buy-now__content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.buy-now__calc {
+	width: 40%;
+	background-color: $blue;
+	border-radius: 10px;
+	padding: 24px 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 360px;
+	min-width: 320px;
+}
+
+.buy-now__calc-title {
+	font-size: 20px;
+	font-weight: $bold;
+	text-transform: uppercase;
+	color: $w;
+	margin-bottom: 24px;
+}
+
+.buy-now__calc-button {
+	margin-top: 24px;
+	width: 100%;
+}
+
+.buy-now__call {
+	background-color: $blue;
+	border-radius: 10px;
+	margin-left: 25px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	@include tablets-hor {
+		width: 60%;
+	}
+	@include tablets {
+		margin-top: 20px;
+		margin-left: 0;
+		width: 80%;
+	}
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.call-form {
+	padding: 25px 28px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	@include tablets-hor {
+		width: 100%;
+	}
+	@include tablets {
+		width: 100%;
+		min-height: 370px;
+	}
+}
+
+.buy-now__call-image {
+	width: 50%;
+
+	@include tablets-hor {
+		display: none;
+	}
+}
+
+.call-form__title {
+	font-size: 22px;
+	color: $w;
+	font-weight: normal;
+}
+
+.call-form__tel {
+	font-size: 30px;
+	font-weight: $extra;
+	// margin-top: 25px;
+	color: $w;
+	white-space: nowrap;
+}
+
+.call-form__desc {
+	// margin-top: 6px;
+	font-size: 16px;
+	color: $w;
+	margin-bottom: 15px;
+}
+
+.call-form__btn {
+	// margin-top: 24px;
+	width: 100%;
+}
+
+.call-form__checkbox-label {
+	display: flex;
+	align-items: center;
+}
+
+.call-form__checkbox-text {
+	margin-left: 10px;
+	color: $w;
+}
+
+.buy-now__call-image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 110%;
+}
+
+.buy-now__call-img {
+	max-width: initial;
+	height: initial;
+	min-height: 100%;
+}
+
+.call-form__label {
+	@include tablets-hor {
+		width: 100%;
+	}
+}

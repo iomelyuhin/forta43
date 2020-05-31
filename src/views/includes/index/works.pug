@@ -49,3 +49,8 @@ section.works
 						a.slider__item-image(href="#")
 							img.slider__item-img(src=`/assets/img/content/${item.img}`)
 						h3.slider__item-title=item.title
+			.slider__controls
+				button(type="buttn").slider__controls-arrow.slider__controls-arrow--prev
+					+icon("arrow", "slider__controls-arrow-icon")
+				button(type="buttn").slider__controls-arrow.slider__controls-arrow--next
+					+icon("arrow", "slider__controls-arrow-icon")

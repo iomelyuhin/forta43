@@ -242,6 +242,7 @@ h2 {
 .desc {
 	font-size: 14px;
 	color: $black;
+	
 }
 
 section {width: 100%;}
@@ -257,9 +258,9 @@ section {width: 100%;}
 }
 
 .input {
-	padding: 20px 0 20px 23px;
+	padding: 15px 0 15px 23px;
 	background-color: $w;
-	border-radius: 7px;
+	border-radius: 10px;
 	width: 100%;
 	&::placeholder {
 		color: $grey;
@@ -267,22 +268,7 @@ section {width: 100%;}
 	}
 }
 
-.form-btn {
-	width: 100%;
-	padding: 21px 0;
-	margin: 0 auto;
-	background-color: $yellow;
-	border-radius: 7px;
-	font-size: 18px;
-	font-weight: bold;
-	text-transform: uppercase;
-	box-shadow: 0 3px 0 #685123;
-	transition: $norm;
 
-	&:hover {
-		background-color: $yellow-hover;
-	}
-}
 
 .checkbox-input {
 	appearance: none;
@@ -326,19 +312,36 @@ section {width: 100%;}
 //===================BUTTONS================================
 //==========================================================
 
-.catalog__button {
+.btn {
 	width: 100%;
-	padding: 18px 0;
+	padding: 15px 0;
 	background-color: $yellow;
-	border-radius: 7px;
+	border-radius: 10px;
 	font-weight: $bold;
 	text-transform: uppercase;
-	box-shadow: 0 3px 0 #685123;
+	box-shadow: 0 4px 0 #685123;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: $norm;
 	font-size: 14px;
+
+	&:hover {
+		background-color: $yellow-hover;
+	}
+}
+
+.form-btn {
+	width: 100%;
+	padding: 15px 0;
+	margin: 0 auto;
+	background-color: $yellow;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	box-shadow: 0 3px 0 #685123;
+	transition: $norm;
 
 	&:hover {
 		background-color: $yellow-hover;

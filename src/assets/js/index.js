@@ -1,7 +1,7 @@
 $(document).ready(function () {
-	//! слайдер работ
+  //! слайдер работ
   $(".slider__list").slick({
-		dots: false,
+    dots: false,
     arrows: false,
     infinite: false,
     speed: 300,
@@ -11,7 +11,7 @@ $(document).ready(function () {
       {
         breakpoint: 1024,
         settings: {
-					slidesToShow: 3,
+          slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
         },
@@ -36,31 +36,30 @@ $(document).ready(function () {
     ],
   });
 
+  //! слайдер контролс
+
+  $(".slider__controls-arrow--prev").click(() => {
+    $(".slider__list").slick("slickPrev");
+  });
+  $(".slider__controls-arrow--next").click(() => {
+    $(".slider__list").slick("slickNext");
+  });
+
   //! переключение видов работ
 
-	//*удаляем активный класс со всех кнопок
-	function removeActiveClassFromButton() {
-		$(".works__slider-choice-link").each(function () {
-			$(this).removeClass("active")
-		})
-	}
+  //*удаляем активный класс со всех кнопок
+  function removeActiveClassFromButton() {
+    $(".works__slider-choice-link").each(function () {
+      $(this).removeClass("active");
+    });
+  }
 
-
-
-
-	//*применяем активный класс со всех кнопок
-	$(".works__slider-choice-link")
-		.click(function (e) {
-
-				removeActiveClassFromButton()
-				$(this).addClass("active")
-				applyCurrentSlider(e.target.dataset.type)
-				// console.log(e.target.dataset.type);
-				$(".slider__list").removeClass("active")
-			})
-			
-
-	
-	
+  //*применяем активный класс со всех кнопок
+  $(".works__slider-choice-link").click(function (e) {
+    removeActiveClassFromButton();
+    $(this).addClass("active");
+    // applyCurrentSlider(e.target.dataset.type);
+    // console.log(e.target.dataset.type);
+    // $(".slider__list").removeClass("active");
+  });
 });
-

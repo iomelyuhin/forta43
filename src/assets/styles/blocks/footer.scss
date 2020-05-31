@@ -1,5 +1,52 @@
 
+@import "../utils/variables";
+@import "../mixins/media";
 .footer {
-  border: 1px
-    solid red;
+	background-color: #1e3054;
+	padding: 40px 0;
+	width: 100%;
+}
+
+.footer__content {
+	display: flex;
+
+	@include phones {
+		display: none;
+	}
+}
+
+.footer__fences-list,
+.footer__enter-list,
+.footer__others-list {
+	width: 25%;
+}
+
+.footer__item {
+	padding-right: 10px;
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.footer__link {
+	font-size: 14px;
+	color: $yellow;
+	border-bottom: 1px solid $yellow;
+	transition: $norm;
+	
+	&:hover {
+		border-bottom: 1px solid transparent;
+	}
+}
+
+.footer__copy {
+	text-align: center;
+	color: $w;
+	margin-top: 35px;
+	font-size: 14px;
+
+	@include phones {
+		margin-top: 0;
+	}
 }

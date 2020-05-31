@@ -1,55 +1,101 @@
 @import "../utils/variables";
 
 .works {
-	background-color: $blue-light;
-	padding: 32px 0 40px 0;
+  background-color: $blue-light;
+  padding: 32px 0 40px 0;
 }
 
 .works__slider-choice {
-	margin-top: 41px;
+  margin-top: 41px;
 }
 
 .works__slider-choice-list {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .works__slider-choice-item {
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
 .works__slider-choice-link {
-	font-size: 14px;
-	text-transform: uppercase;
-	border-bottom: 2px solid transparent;
-	transition: $norm;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: $norm;
 
-	&.active {
-		border-bottom: 2px solid $blue;
-		padding-bottom: 3px;
-	}
+  &.active {
+    border-bottom: 2px solid $blue;
+    padding-bottom: 3px;
+  }
 }
 
 .works__content {
-	margin-top: 43px;
+  position: relative;
+  margin-top: 43px;
 }
 
 .slider__list {
-	display: none;
+  display: none;
 
-	&.active {
-		display: block;
-	}
+  &.active {
+    display: block;
+  }
 }
 
 .slider__item {
-	margin-right: 30px;
-	&:nth-child(4n) {
-		margin-left: 0;
-	}
+  margin: 0 15px;
 }
 
 .slider__item-title {
-	margin-top: 16px;
-	text-align: center;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.slider__controls {
+  width: 100%;
+  padding: 0 25px;
+  left: 0;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: 38%;
+  transform: translateY(-50%);
+}
+
+.slider__controls-arrow {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgba($w, 0.6);
+  font-size: 16px;
+  font-weight: $extra;
+  transition: $norm;
+
+  &:hover {
+    background-color: rgba($w, 0.9);
+  }
+}
+
+.slider__controls-arrow-icon {
+  width: 17px;
+  height: 29px;
+	stroke: $black;
+	fill: none;
+}
+
+.slider__controls-arrow--prev {
+  transform: rotate(180deg);
+
+  .slider__controls-arrow-icon {
+    transform: translateX(2px);
+  }
+}
+.slider__controls-arrow--next {
+  .slider__controls-arrow-icon {
+    transform: translateX(2px);
+  }
 }

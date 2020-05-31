@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../mixins/media";
 
 .catalog {
 	padding: 44px 0;
@@ -17,12 +18,20 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
+
 }
 
 .catalog__item {
 	width: 23%;
 	display: flex;
 	flex-direction: column;
+	@include tablets {
+		width: 45%;
+	}
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .catalog__item-title {

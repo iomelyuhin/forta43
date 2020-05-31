@@ -21,11 +21,30 @@ document.addEventListener(`DOMContentLoaded`, function () {
 	// Открытие/закрытие каталога
 	const catBtn = document.getElementById("catBtn")
 	const cat = document.getElementById("cat")
+	const closeCatBtn = document.getElementById("closeCat")
+	
 	catBtn.addEventListener("click", e => {
 		e.preventDefault();
 		// console.log('ckick');
 		cat.classList.toggle("active")
 		
 	})
+
+	closeCatBtn.addEventListener("click", e => {
+		e.preventDefault();
+		cat.classList.remove("active")
+	})
 	// Конец Открытие/закрытие каталога
+	
+	// открываем меню на мобильных
+	const burger = document.querySelector(".hamburger")
+	const mainMenu = document.querySelector(".header__nav-list")
+	
+	burger.addEventListener("click", e => {
+		e.preventDefault()
+		cat.classList.remove("active")
+		mainMenu.classList.toggle("active")
+		burger.classList.toggle("is-active")
+	})
+	// Конец открываем меню на мобильных
 });

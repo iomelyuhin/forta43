@@ -32,6 +32,13 @@ $(document).ready(function () {
     // settings: "unslick"
     // instead of a settings object
     ]
+  }); //! слайдер контролс
+
+  $(".slider__controls-arrow--prev").click(function () {
+    $(".slider__list").slick("slickPrev");
+  });
+  $(".slider__controls-arrow--next").click(function () {
+    $(".slider__list").slick("slickNext");
   }); //! переключение видов работ
   //*удаляем активный класс со всех кнопок
 
@@ -44,9 +51,8 @@ $(document).ready(function () {
 
   $(".works__slider-choice-link").click(function (e) {
     removeActiveClassFromButton();
-    $(this).addClass("active");
-    applyCurrentSlider(e.target.dataset.type); // console.log(e.target.dataset.type);
-
-    $(".slider__list").removeClass("active");
+    $(this).addClass("active"); // applyCurrentSlider(e.target.dataset.type);
+    // console.log(e.target.dataset.type);
+    // $(".slider__list").removeClass("active");
   });
 });

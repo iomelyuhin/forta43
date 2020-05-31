@@ -16,14 +16,26 @@
 .header__content-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+	align-items: center;
+	
+	@include phones {
+		flex-direction: column;
+	}
 }
 
 .header__logo {
-	max-width: 400px;
+  max-width: 400px;
+
+  @include desktop {
+    width: 32%;
+  }
+
+  @include tablets {
+    width: 40%;
+	}
 	
-	@include desktop {
-		width: 32%;
+	@include phones {
+		width: 80%;
 	}
 }
 
@@ -31,16 +43,20 @@
   display: block;
   border-radius: 10px;
   border: solid 2px $yellow;
-	padding: 8px 31px;
-	transition: $norm;
-	
-	&:hover {
-		background-color: $yellow;
-	}
+  padding: 8px 31px;
+  transition: $norm;
 
-	@include desktop {
-		padding: 8px 10px;
-	}
+  &:hover {
+    background-color: $yellow;
+  }
+
+  @include desktop {
+    padding: 8px 10px;
+  }
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .header__calc-btn-text {
@@ -57,11 +73,11 @@
     background-image: url("/assets/img/icons/calc-ico.svg");
     background-size: contain;
     background-repeat: no-repeat;
-		margin-right: 7px;
-		
-		@include tablets {
-			display: none;
-		}
+    margin-right: 7px;
+
+    @include tablets {
+      display: none;
+    }
   }
 }
 
@@ -82,13 +98,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 15px;
-		@include desktop {
-			display: none;
-		}
+    @include desktop {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    font-size: 26px;
 	}
-	
-	@include desktop {
-		font-size: 26px;
+	@include phones {
+		font-size: 30Px;
 	}
 }
 
@@ -97,18 +116,28 @@
   display: flex;
   flex-direction: column;
 	align-items: flex-end;
+	
+	@include phones {
+		align-items: center;
+		margin-top: 20px;
+	}
 }
 
 .header__contacts-other {
-	width: 100%;
+  width: 100%;
   display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 27px;
-	@include desktop {
-		margin-top: 20px;
-		flex-direction: column;
-		align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 27px;
+  @include desktop {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+	}
+	
+	@include phones {
+		align-items: center;
+		flex-direction: column-reverse;
 	}
 }
 
@@ -116,253 +145,397 @@
 .header__contcts-other-time {
   font-weight: $reg;
   font-size: 15px;
-	color: $blue-text;
-	display: flex;
-	align-items: center;
-	line-height: 1;
+  color: $blue-text;
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .header__contacts-other-email {
-	&::before {
-		content:"";
-		display: flex;
-		width: 18Px;
-		height: 18Px;
-		background-image: url('/assets/img/content/envelopes.webp');
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-right: 10px;
-		background-position-y: 3Px;
+  &::before {
+    content: "";
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-image: url("/assets/img/content/envelopes.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position-y: 3px;
+	}
+	@include phones {
+		margin-top: 10px;
 	}
 }
 
 .header__contcts-other-time {
-	margin-left: 34px;
-	&::before {
-		content:"";
-		display: flex;
-		width: 18Px;
-		height: 20Px;
-		background-image: url('/assets/img/content/tool.webp');
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-right: 10px;
-		background-position-y: 2Px;
+  margin-left: 34px;
+  &::before {
+    content: "";
+    display: flex;
+    width: 18px;
+    height: 20px;
+    background-image: url("/assets/img/content/tool.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position-y: 2px;
+  }
+  @include desktop {
+    margin-top: 15px;
 	}
-	@include desktop {
-		margin-top: 15px;
+	@include phones {
+		margin-left: 0;
 	}
 }
 
 ///NAVIGATION
 .header__nav {
-	height: 52Px;
-	background-color: $blue;
-	width: 100%;
+  height: 52px;
+  background-color: $blue;
+  width: 100%;
+
+  @include tablets {
+    height: initial;
+    background-color: transparent;
+    width: initial;
+  }
 }
 
 .header__nav-container {
-	display: flex;
-	height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 .header__nav-list {
-	display: flex;
-	flex-direction: row;
-	height: 100%;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+
+  @include tablets {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    z-index: 10;
+    justify-content: center;
+    transition: $norm;
+  }
+  &.active {
+    @include tablets {
+      right: 0;
+    }
+  }
 }
 
 .header__nav-item {
-	text-transform: uppercase;
-	font-size: 16px;
-	color: $w;
-	height: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $w;
+  height: 100%;
+
+  @include tablets {
+    max-height: 50px;
+  }
 }
 
 .header__nav-item-link {
-	padding: 0 35Px;
-	display: flex;
-	height: 100%;
-	align-items: center;
-	transition: $norm;
+  padding: 0 35px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  transition: $norm;
 
-	&:hover {
-		background-color: $yellow;
-		color: $black;
-	}
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+    @include tablets {
+      background-color: $blue;
+      color: $w;
+    }
+  }
 }
 
 .header__nav-item--catalog {
-	background-color: $yellow;
-	padding-left: 17px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 35px;
-		transform: translateY(-50%);
-		display: flex;
-		width: 11Px;
-		height: 12Px;
-		background-image: url("/assets/img/content/catalog-icon.webp");
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
+  background-color: $yellow;
+  padding-left: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    display: flex;
+    width: 11px;
+    height: 12px;
+    background-image: url("/assets/img/content/catalog-icon.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include tablets {
+      background-image: url("/assets/img/icons/arrow.svg");
+      width: 8px;
+      height: 14px;
+      left: initial;
+      right: 0px;
+    }
+  }
+  @include tablets {
+    background-color: $blue;
+    padding-left: initial;
+  }
 
-	.header__nav-item-link {
-		color: $black;
-	}
+  .header__nav-item-link {
+    color: $black;
+    @include tablets {
+      color: $yellow;
+    }
+  }
 }
 
 //!========CATALOG========
 .cat {
-	display: flex;
-	position: absolute;
-	z-index: 10;
-	background-color: rgba($blue, 0.9);
-	width: 100vw;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height $norm;
-	&.active {
-		max-height: 100vh;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba($blue, 0.9);
+  width: 100vw;
+  max-height: 0;
+  overflow: hidden;
+  transition: $norm;
+  &.active {
+    max-height: 100vh;
 		display: flex;
-	}
+		
+		@include tablets {
+			right: 0;
+			background-color: $blue;
+		}
+		.cat__arrow {
+			@include tablets {
+				display: flex;
+				align-items: center;
+				position: fixed;
+				left: 30px;
+				bottom: 45px;
+			}
+		}
+  }
+
+  @include tablets {
+    position: fixed;
+    top: 0;
+    max-height: initial;
+    right: -100%;
+    height: 100%;
+  }
 }
 
 .cat__container {
-	padding: 15px 0 30px 0;
-	display: flex;
+  padding: 15px 0 30px 0;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+  }
 }
 
 .cat__fences {
-	max-width: 400px;
+  max-width: 400px;
 	border-right: 1px solid $yellow;
+	
+	@include tablets {
+		border: none;
+		border-bottom: 1px solid $yellow;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		width: 100%;
+		max-width: initial;
+	}
 }
 
 .cat__fences-wrap {
-	display: flex;
+  display: flex;
 
-	@include desktop {
-		flex-direction: column;
+  @include desktop {
+    flex-direction: column;
+	}
+	
+	@include tablets {
+		align-items: center;
+		flex-direction: column-reverse;
 	}
 }
 
 .cat__fences-title {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	font-size: 16px;
-	font-weight: $bold;
-	text-transform: uppercase;
-	color: $yellow;
-	margin-right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $yellow;
+  margin-right: 48px;
 
-	&::before {
-		content: "";
-		display: flex;
-		width: 50px;
-		height: 50px;	
-		background-image: url("/assets/img/content/limits.webp");
-		background-repeat: no-repeat;
-		background-size: contain;
+  &::before {
+    content: "";
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-image: url("/assets/img/content/limits.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
 		margin-right: 17px;
 	}
+	
 }
 
 .cat__fences-btn {
-	font-size: 14px;
-	padding: 15px 25px;
-	border-radius: 10px;
-	background:$yellow;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: $norm;
-	
-	&:hover {
-		background:$yellow-hover;
+  font-size: 14px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $norm;
+
+  &:hover {
+    background: $yellow-hover;
+  }
+  @include desktop {
+    margin-top: 10px;
+    max-width: 200px;
 	}
-	@include desktop {
-		margin-top: 10px;
-		max-width: 200px;
+	
+	@include tablets {
+		margin-bottom: 20px;
 	}
 }
 
 .cat__item {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .cat__item-link {
-	color: $yellow;
-	border-bottom: 1px solid transparent;
-	transition: $norm;
-	font-size: 16px;
-	
-	&:hover {
-		border-bottom: 1px solid $yellow;
-	}
+  color: $yellow;
+  border-bottom: 1px solid transparent;
+  transition: $norm;
+  font-size: 16px;
+
+  &:hover {
+    border-bottom: 1px solid $yellow;
+  }
 }
 
 .cat__enter {
-	padding: 0 25px;
+  padding: 0 25px;
 	border-right: 1px solid $yellow;
+	
+	@include tablets {
+		border: none;
+		border-bottom: 1px solid $yellow;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		width: 100%;
+	}
 }
 
 .cat__enter-title {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	font-size: 16px;
-	font-weight: $bold;
-	text-transform: uppercase;
-	color: $yellow;
-	// margin-right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $yellow;
+  // margin-right: 48px;
 
-	&::before {
-		content: "";
-		display: flex;
-		width: 65px;
-		height: 52px;	
-		background-image: url("/assets/img/content/enter.webp");
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin-right: 17px;
+  &::before {
+    content: "";
+    display: flex;
+    width: 65px;
+    height: 52px;
+    background-image: url("/assets/img/content/enter.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 17px;
+	}
+	
+	@include tablets {
+		justify-content: center;
 	}
 }
 
 .cat__others {
-	padding: 0 25px;
-
+  padding: 0 25px;
 }
 
 .cat__others-title {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	font-size: 16px;
-	font-weight: $bold;
-	text-transform: uppercase;
-	color: $yellow;
-	// margin-right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $yellow;
+  // margin-right: 48px;
 
-	&::before {
-		content: "";
-		display: flex;
-		width: 53px;
-		height: 53px;	
-		background-image: url("/assets/img/content/others.webp");
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin-right: 17px;
-	}
+  &::before {
+    content: "";
+    display: flex;
+    width: 53px;
+    height: 53px;
+    background-image: url("/assets/img/content/others.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 17px;
+  }
+}
+
+.cat__arrow {
+	display: none;
+}
+.cat__arrow-icon {
+	width: 14px;
+	height: 23px;
+	stroke: $w;
+	fill: none;
+	transform: rotate(180deg);
+}
+
+.cat__arrow-text {
+	margin-left: 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: $w;
 }
 //!========HAMBURGER========
 .header__nav .hamburger {
-	display: none;
+  display: none;
+  width: 55px;
+  height: 55px;
+  background-color: $blue;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+	z-index: 11;
+	padding: initial;
+
+  @include tablets {
+    display: flex;
+  }
 }

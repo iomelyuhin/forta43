@@ -71,4 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clusterer.add(geoObjects);
   }
-})();
+});

@@ -23,9 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var catBtn = document.getElementById("catBtn");
   var cat = document.getElementById("cat");
+  var closeCatBtn = document.getElementById("closeCat");
   catBtn.addEventListener("click", function (e) {
     e.preventDefault(); // console.log('ckick');
 
     cat.classList.toggle("active");
+  });
+  closeCatBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    cat.classList.remove("active");
   }); // Конец Открытие/закрытие каталога
+  // открываем меню на мобильных
+
+  var burger = document.querySelector(".hamburger");
+  var mainMenu = document.querySelector(".header__nav-list");
+  burger.addEventListener("click", function (e) {
+    e.preventDefault();
+    cat.classList.remove("active");
+    mainMenu.classList.toggle("active");
+    burger.classList.toggle("is-active");
+  }); // Конец открываем меню на мобильных
 });

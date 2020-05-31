@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../mixins/media";
 
 .calc {
   padding: 56px 0;
@@ -10,7 +11,7 @@
 .calc__form {
   margin-top: 35px;
   background-color: $blue;
-  border-radius: 7px;
+  border-radius: 10px;
 	padding: 30px 45px;
 	width: 100%;
 	max-width: 945px;
@@ -22,11 +23,23 @@
 .calc__checkboxes {
 	display: flex;
 	justify-content: center;
+
+	@include tablets {
+		flex-wrap: wrap;
+	}
+}
+
+.calc__checkboxes-label {
+	@include tablets {
+		width: 50%;
+	}
 }
 
 .calc__checkboxes-radio {
 	appearance: none;
 	position: absolute;
+
+	
 }
 
 .calc__heckboxes-label {
@@ -41,12 +54,15 @@
 .calc__checkboxes-fake-radio {
 	background-color: transparent;
 	padding: 10px 20px;
-  border-radius: 7px;
+  border-radius: 10px;
 	font-weight: $bold;
 	color: $w;
 	margin-right: 10px;
 	text-transform: uppercase;
 	transition: $norm;
+	@include tablets {
+		text-align: center;
+	}
 }
 
 .calc__checkboxes-radio:checked+.calc__checkboxes-fake-radio {
@@ -65,6 +81,10 @@
 .calc__inputs-label {
 	width: 48%;
 	margin-bottom: 30px;
+	
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .calc__input-title {
@@ -80,7 +100,7 @@
 	width: 100%;
 	padding: 15px 23px;
 	margin-right: 29px;
-	border-radius: 7px;
+	border-radius: 10px;
 	text-transform: uppercase;
 	color: $grey;
 }

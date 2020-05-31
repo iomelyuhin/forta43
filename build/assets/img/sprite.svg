@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="ben-03" viewBox="0 0 68.000000 68.000000" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 11 20">
+<path d="M1 19L9 10L0.999999 1" stroke-width="2"/>
+</symbol><symbol id="ben-03" viewBox="0 0 68.000000 68.000000" preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,68.000000) scale(0.100000,-0.100000)">
 <path d="M115 633 c-26 -37 -35 -58 -35 -90 l0 -43 -40 0 c-39 0 -40 -1 -40

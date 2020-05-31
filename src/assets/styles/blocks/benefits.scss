@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../mixins/media";
 
 .benefits {
 	padding: 30px 0;
@@ -14,18 +15,40 @@
 .benefits__list {
 	display: flex;
 	justify-content: space-between;
+
+	@include tablets {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 
 .benefits__item {
 	width: 30%;
 	display: flex;
 	align-items: flex-start;
+
+	@include tablets-hor {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	@include tablets {
+		padding: 15px 0;
+		width: 50%;
+	}
 }
 
 .benefits__item-image {
 	flex-shrink: 0;
+	@include tablets-hor {
+		height: 75Px;
+	}
 }
 
 .benefits__item-text {
 	margin-left: 30px;
+	@include tablets-hor {
+		text-align: center;
+		margin-left: 0;
+	}
 }

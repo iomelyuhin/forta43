@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../mixins/media";
 
 .hero {
 	padding: 35px 0 35px 0;
@@ -8,6 +9,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include tablets {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }
 //==============================================
 //=================FORM STYLES==================
@@ -16,6 +22,16 @@
 .hero__form {
 	width: 40%;
 	max-width: 458px;
+
+	@include tablets {
+		margin-top: 200px;
+		width: 67%;
+	}
+
+	@include phones {
+		margin-top: 0;
+		width: 100%;
+	}
 }
 
 .hero__title {
@@ -25,6 +41,13 @@
 	
 	span {
 		color: $yellow-text;
+	}
+
+	@include tablets {
+		text-align: center;
+		background-color: rgba($w, 0.5);
+		width: 90%;
+		margin: 0 auto;
 	}
 }
 
@@ -42,6 +65,17 @@
 	// justify-content: flex-end;
 	// background: URL("/assets/img/content/hero.png") no-repeat;
 	// background-size: contain;
+
+	@include tablets {
+		position: absolute;
+    z-index: -1;
+		top: -72px;
+		width: 100%;
+	}
+
+	@include phones {
+		display: none;
+	}
 }
 
 .hero__image-img {
