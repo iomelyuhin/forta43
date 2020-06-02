@@ -1,13 +1,22 @@
 section.mainsection
 	.maisection__container.container
-		.maisection__title Забор из профнастила эконом
+		h2.maisection__title Забор из профнастила эконом
 		.maisection__content
 			.maisection__info.maisection__info--info
 				.info__current-slide
-				.info__text
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					img(src="/assets/img/content/work-01.jpg")
+					//- img.info__current-slide-img(src="/assets/img/content/work-01.jpg")
+				.info__text(data-da=("maisection__content,2,768"))
 					.info__cta
 						.info__cta-price от 951 руб. за п.м.
-						+button("Заказать детальный рачёт")
+						+button("Заказать детальный рачёт", "/", "info__cta-order-btn")
 					ul.info__benefits
 						li.info__benefits-item Доставка до 50 км от Кирова в ПОДАРОК*
 						li.info__benefits-item Выездной менеджер Бесплатно*
@@ -16,6 +25,25 @@ section.mainsection
 				ul.maisection__slider-list
 					li.maisection__slider-item
 						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+					li.maisection__slider-item
+						img.maisection__slider-item-img(src="/assets/img/content/work-01.jpg")
+				.slider__controls
+					button(type="buttn").slider__controls-arrow.slider__controls-arrow--prev
+						+icon("arrow", "slider__controls-arrow-icon")
+					button(type="buttn").slider__controls-arrow.slider__controls-arrow--next
+						+icon("arrow", "slider__controls-arrow-icon")
 			.maisection__features
 				table.maisection__features-table
 					caption.maisection__features-table-capt Характеристики
@@ -35,22 +63,5 @@ section.mainsection
 						tr
 							th Монтаж:
 							td(data-ttl="Монтаж:") Установка ограждения и всех его элементов включена в стоимость
-//- 					<table>
-//-   <caption>Statement Summary</caption>
-//-   <thead>
-//-     <tr>
-//-       <th scope=«col»>Account</th>
-//-       <th scope=«col»>Due Date</th>
-//-       <th scope=«col»>Amount</th>
-//-       <th scope=«col»>Period</th>
-//-     </tr>
-//-   </thead>
-//-   <tbody>
-//-     <tr>
-//-       <td>Visa — 3412</td>
-//-       <td>04/01/2016</td>
-//-       <td>$1,190</td>
-//-       <td>03/01/2016 — 03/31/2016</td>
-//-     </tr>
-//-   </tbody>
-//- </table>
+				.mainsection__features-button
+					+button("Получить консультацию", "mainsection__features-btn")

@@ -1,3 +1,46 @@
+@import "../utils/variables";
+@import "../mixins/media";
+
 .breadcrumbs {
 	margin-top: 30px;
+	width: 100%;
+}
+
+.breadcrumbs__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.breadcrumbs__item {
+	display: flex;
+	margin-right: 10px;
+	&::before {
+		content: "/";
+		display: flex;
+		margin-right: 10px;
+	}
+
+	&:first-child::before {
+		display: none;
+	}
+
+	&:last-child {
+		.breadcrumbs__item-link {
+			color: $text-grey;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
+.breadcrumbs__item-link {
+	color: $blue;
+	font-size: 14px;
+	border-bottom: 1px solid $blue;
+	transition: $norm;
+
+	&:hover {
+		border-bottom: 1px solid transparent;
+	}
+
 }

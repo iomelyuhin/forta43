@@ -1,0 +1,251 @@
+@import "../utils/variables";
+@import "../mixins/media";
+
+.mainsection {
+  margin-top: 20px;
+}
+
+.maisection__info {
+  margin-top: 30px;
+}
+
+.maisection__info--info {
+  display: flex;
+  width: 100%;
+	justify-content: space-between;
+	
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+
+
+.info__current-slide {
+  overflow: hidden;
+  max-width: 50%;
+  position: relative;
+  box-sizing: border-box;
+	border-radius: 10px;
+	
+	@include tablets {
+		max-width: 100%;
+	}
+
+  @include phones {
+    display: none;
+  }
+}
+
+.info__current-slide-img {
+  min-width: 100%;
+}
+
+.info__text {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+	
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.info__cta {
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    flex-direction: column;
+    align-items: start;
+	}
+	
+	@include tablets {
+		margin-top: 20px;
+		flex-direction: row;
+	}
+}
+.info__cta-price {
+  width: 48%;
+  padding: 15px 0;
+  background-color: $blue;
+  border-radius: 10px;
+  font-weight: $semi;
+  text-transform: uppercase;
+  color: $w;
+  text-align: center;
+  @include desktop {
+    margin-bottom: 10px;
+    width: 70%;
+	}
+	
+	@include tablets {
+		width: 48%;
+	}
+}
+
+.info__cta-order-btn {
+  width: 48%;
+  @include desktop {
+    margin-bottom: 10px;
+    width: 70%;
+	}
+	
+	@include tablets {
+		width: 48%;
+	}
+}
+
+.info__benefits {
+  justify-content: space-around;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: $semi;
+  color: $black;
+}
+
+.info__benefits-item {
+  display: flex;
+  align-items: center;
+  font-weight: $bold;
+
+  &::before {
+    content: "";
+    display: flex;
+    margin-right: 30px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  &:first-child::before {
+    background-image: url("/assets/img/content/ben-ico-01.png");
+  }
+  &:nth-child(2)::before {
+    background-image: url("/assets/img/content/ben-ico-02.png");
+  }
+  &:last-child::before {
+    background-image: url("/assets/img/content/ben-ico-03.png");
+  }
+}
+
+.maisection__slider {
+  margin-top: 30px;
+  position: relative;
+}
+
+.maisection__slider-item-img {
+  max-height: 206px;
+  overflow: hidden;
+  max-width: initial;
+  // width: 315px;
+  filter: grayscale(100%);
+
+  @include desktop {
+    max-height: 150px;
+	}
+	
+	@include tablets {
+		max-height: 100px;
+	}
+  @include phones {
+    max-height: initial;
+    max-width: 100%;
+  }
+}
+
+.slick-current {
+  .maisection__slider-item-img {
+    filter: grayscale(0);
+  }
+}
+
+.slider__controls {
+  width: 100%;
+  padding: 0 25px;
+  left: 0;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider__controls-arrow {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgba($w, 0.6);
+  font-size: 16px;
+  font-weight: $extra;
+  transition: $norm;
+
+  &:hover {
+    background-color: rgba($w, 0.9);
+  }
+}
+
+.slider__controls-arrow-icon {
+  width: 17px;
+  height: 29px;
+  stroke: $black;
+  fill: none;
+}
+
+.slider__controls-arrow--prev {
+  transform: rotate(180deg);
+
+  .slider__controls-arrow-icon {
+    transform: translateX(2px);
+  }
+}
+.slider__controls-arrow--next {
+  .slider__controls-arrow-icon {
+    transform: translateX(2px);
+  }
+}
+
+//==================================
+// Таблицца характеристик
+//==================================
+.maisection__features {
+  margin-top: 35px;
+}
+
+.maisection__features-table {
+  width: 100%;
+
+  .maisection__features-table-capt {
+    font-size: 18px;
+    font-weight: $extra;
+    color: $black;
+    margin-bottom: 30px;
+  }
+
+  tr {
+    background-color: $blue-light;
+    &:nth-child(2n) {
+      background-color: #fff;
+    }
+    th,
+    td {
+      padding: 16px 0 16px 50px;
+      text-align: left;
+      font-weight: $bold;
+    }
+  }
+}
+
+.mainsection__features-button {
+  margin: 30px auto 40px auto;
+  width: 30%;
+}

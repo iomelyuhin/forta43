@@ -1,0 +1,68 @@
+-
+	var additionalList = [
+		{
+			title: "Забор из профнастила эконом",
+			price: "от 951 руб. за&nbsp;п.м.",
+			img: "cat-01.jpg",
+			desc1: "<span>В стоимость забора включены:</span>",
+			desc2: "<span>Профнастил: </span>с односторонним полимерным покрытием толщиной 0,3&nbsp;мм",
+			desc3: "<span>Столбы: </span>60х60&nbsp;мм с толщиной стенки 1,5&nbsp;мм",
+			desc4: "<span>Поперечины (лаги): </span>40х20 мм с толщиной стенки 1,5&nbsp;мм",
+			desc5: "<span>Окраска каркаса забора: </span>грунтовка ГФ-021",
+			desc6: "<span>Услуги: </span>Монтаж",
+			desc7: "<span>Гарантия на забор 12&nbsp;месяцев</span>",
+			hrefInfo: "/goods/prof.html",
+			hrefOrder: "/"
+		},
+		{
+			title: "Забор из профнастила эконом",
+			price: "от 951 руб. за п.м.",
+			img: "cat-01.jpg",
+			desc1: "<span>В стоимость забора включены:</span>",
+			desc2: "<span>Профнастил: </span>с односторонним полимерным покрытием толщиной 0,3&nbsp;мм",
+			desc3: "<span>Столбы: </span>60х60&nbsp;мм с толщиной стенки 1,5&nbsp;мм",
+			desc4: "<span>Поперечины (лаги): </span>40х20&nbsp;мм с толщиной стенки 1,5&nbsp;мм",
+			desc5: "<span>Окраска каркаса забора: </span>грунтовка ГФ-021",
+			desc6: "<span>Услуги: </span>Монтаж",
+			desc7: "<span>Гарантия на забор 12&nbsp;месяцев</span>",
+			hrefInfo: "/goods/prof.html",
+			hrefOrder: "/"
+		},
+		{
+			title: "Забор из профнастила эконом Забор из профнастила эконом",
+			price: "от 951 руб. за п.м.",
+			img: "cat-01.jpg",
+			desc1: "<span>В стоимость забора включены:</span>",
+			desc2: "<span>Профнастил: </span>с односторонним полимерным покрытием толщиной 0,3&nbsp;мм",
+			desc3: "<span>Столбы: </span>60х60&nbsp;мм с толщиной стенки 1,5&nbsp;мм",
+			desc4: "<span>Поперечины (лаги): </span>40х20 мм с толщиной стенки 1,5&nbsp;мм",
+			desc5: "<span>Окраска каркаса забора: </span>грунтовка ГФ-021",
+			desc6: "<span>Услуги: </span>Монтаж",
+			desc7: "<span>Гарантия на забор 12&nbsp;месяцев</span>",
+			hrefInfo: "/goods/prof.html",
+			hrefOrder: "/"
+		}
+	]
+section.additional
+	.additional__container.container
+		h2.additional__title С этим забором также заказывают:
+		ul.additional__list
+			each item in additionalList
+				li.additional__item
+					h3.additional__item-title=item.title
+					.additional__item-image
+						img.additional__item-img(src=`/assets/img/content/${item.img}` alt=item.title)
+						.additional__item-price=item.price
+					.additional__item-desc
+						.additional__item-desc-text!=item.desc1
+						.additional__item-desc-text!=item.desc2
+						.additional__item-desc-text!=item.desc3
+						.additional__item-desc-text!=item.desc4
+						.additional__item-desc-text!=item.desc5
+						.additional__item-desc-text!=item.desc6
+						.additional__item-desc-text!=item.desc7
+					.additional__item-buttons
+						.additional__item-detail-button
+							+button("Подробнее", item.hrefInfo, "additional__item-detail-btn")
+						.additional__item-calc-button
+							+button("Заказать детальный расчёт", item.hrefOrder, "additional__item-calc-btn")

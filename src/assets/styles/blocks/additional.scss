@@ -1,0 +1,82 @@
+@import "../utils/variables";
+@import "../mixins/media";
+
+.additional {
+	background-color: $blue-light;
+	padding: 50px 0 60px 0;
+}
+
+.additional__list {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.additional__item {
+	width: 30%;
+	border: solid 1px #c7c6c6;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.additional__item-title {
+	padding: 18px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: normal;
+	font-size: 18px;
+	background-color: $blue;
+	color: $w;
+	border-radius: 10px 10px 0 0;
+}
+
+.additional__item-image {
+	width: 100%;
+	position: relative;
+}
+
+.additional__item-img {
+	min-width: 100%;
+}
+
+.additional__item-price {
+	padding: 12px 28px;
+	background-color: $yellow;
+	border-radius: 0 10px 10px 0;
+	position: absolute;
+	left: 0;
+	bottom: 28px;
+	font-size: 18px;
+}
+
+.additional__item-desc {
+	font-weight: normal;
+	font-size: 14px;
+	color: $black;
+	padding: 18px 16px;
+	line-height: 30px;
+
+	span {
+		font-weight: $bold;
+	}
+}
+
+.additional__item-buttons {
+	padding: 0 16px;
+}
+
+.additional__item-detail-button {
+	margin-bottom: 15px;
+
+}
+
+.additional__item-detail-btn {
+	background-color: $blue;
+	box-shadow: 0 4px 0 #111a2d;
+	color: $w;
+}
+
+.additional__item-calc-button {
+	margin-bottom: 15px;
+}

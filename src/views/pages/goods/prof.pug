@@ -1,7 +1,10 @@
 extends ../../common/layout
 
 block styles
-	//- link(rel="stylesheet" href="/assets/css/blocks/blog.css")
+	link(rel="stylesheet" href="/assets/css/blocks/breadcrumbs.css")
+	link(rel="stylesheet" href="/assets/css/blocks/mainsection.css")
+	link(rel="stylesheet" href="/assets/css/blocks/additional.css")
+	link(rel="stylesheet" href="/assets/css/blocks/buy-now.css")
 
 block variables
 	-var title = "Забор из профнастила эконом"
@@ -9,6 +12,9 @@ block variables
 block content
 	include ../../common/breadcrumbs
 	include ../../includes/goods/mainsection
+	include ../../includes/goods/additional
+	include ../../common/buy-now
 
 block scripts
-	//- script(src="/assets/js/index.js")
+	script(src="/assets/js/product.js")
+	script(src="/assets/js/dynad.js")
